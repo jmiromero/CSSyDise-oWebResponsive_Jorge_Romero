@@ -1,0 +1,177 @@
+header{
+  background-color: #5b7989;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-shadow: 2px 2px #02010a;
+  padding-left: 3%;
+  padding-top:1% ;
+}
+
+body{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Dancing Script', cursive;
+  /*font-size: 2vw;*/
+  background-color: #02010a;
+}
+
+#Menu a{
+  color: white;
+  text-align: right;
+}
+
+h1{
+  /*font-size: 4vw;*/
+}
+
+/*Contenedor General*/
+#contenido {
+  display: flex;/*ok*/
+  flex-flow: column;/*ok*/
+}
+
+/*Contenedor de Imagen Principal*/
+#principal .contenedor{
+  background-color: #82c3a6;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div{
+  padding: 2%;
+}
+
+
+/* Estandirizando Formato de Imagenes*/
+.contenedor img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 2px 2px 5px #02010a;
+}
+
+/*Contenedor de Imagenes Secundarias*/
+#secundarias .contenedor{
+  background-color: #d5c75f;
+  display: flex;
+  flex-flow: row;
+
+}
+
+/*Accion el cursor sobre Imagen 2*/
+.img2 :hover img{
+  box-shadow: 2px 2px 5px #82c3a6; /*ok*/
+  -webkit-box-shadow: 2px 2px 5px #82c3a6;
+  -moz-box-shadow: 2px 2px 5px #82c3a6;
+
+  border: 2px; /*ok*/
+  -ms-transform: rotate(10deg); /* IE 9 - ok */
+	-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera - ok */
+	transform: rotate(10deg); /*ok*/
+  }
+
+/*Accion el cursor sobre Imagen 3*/
+.img3 :hover img{
+  box-shadow: 2px 2px 5px #82c3a6; /*ok*/
+  -webkit-box-shadow: 2px 2px 5px #82c3a6;
+  -moz-box-shadow: 2px 2px 5px #82c3a6;
+  border: 2px;
+  transform: translate(20px, -5px);
+}
+
+footer{
+  background-color: #c6d5c5;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*Contenedor de modulos de Pie de Pagina*/
+#Pie .contenedor3 {
+  display: flex;/*ok*/
+  flex-flow: row;/*ok*/
+}
+
+/*Modulos de Pie de Página*/
+#Pie .contenedor3 div{
+  width: 100%;
+}
+
+/*--------------Pagina Paisajes HTML---------------*/
+
+#contenido .Fila1{
+  background-color: #82c3a6;
+  border: 1px;
+  display: flex;
+  flex-direction: row;
+}
+
+#contenido .Fila2{
+  background-color: #82c3a6;
+  border: 1px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Fila1 img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 2px 2px 5px black;
+}
+
+.Fila2 img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 2px 2px 5px black;
+}
+
+/*Efecto en imagenes*/
+.img4{
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.img5{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.img6{
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+.img7{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.img9{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*--------------Pagina Retratos HTML---------------*/
+
+/*Acciones para pantallas de Celular*/
+@media (max-width:900px){
+  #secundarias .contenedor{
+    flex-direction: column;
+  }
+
+  #Pie .contenedor3 {
+    flex-direction: column;
+  }
+
+  #contenido .Fila1{
+    flex-direction: column;
+  }
+
+  #contenido .Fila2{
+    flex-direction: column;
+  }
+
+}
