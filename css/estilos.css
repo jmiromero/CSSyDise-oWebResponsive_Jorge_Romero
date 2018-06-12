@@ -1,4 +1,19 @@
+/* Animacion Pantalla */
+@keyframes ventana-animacion {
+	0% {
+	   margin-top: 150%;
+	}
+	60% {
+	   margin-top: -5%;
+	}
+	100% {
+		 margin-top: 0%;
+	}
+}
+
 header{
+  animation-name: Ventana-animacion;
+	animation-duration: 2s;
   background-color: #5b7989;
   color: white;
   border-top-left-radius: 10px;
