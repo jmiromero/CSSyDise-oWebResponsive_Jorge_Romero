@@ -1,18 +1,5 @@
-/* Animacion Pantalla */
-@keyframes ventana-animacion {
-	0% {
-	   margin-top: 150%;
-	}
-	60% {
-	   margin-top: -5%;
-	}
-	100% {
-		 margin-top: 0%;
-	}
-}
-
 header{
-  animation-name: Ventana-animacion;
+  animation-name: header-animacion;
 	animation-duration: 2s;
   background-color: #5b7989;
   color: white;
@@ -20,31 +7,27 @@ header{
   border-top-right-radius: 10px;
   text-shadow: 2px 2px #02010a;
   padding-left: 3%;
-  padding-top:1% ;
+  padding-top: 1% ;
+  padding-bottom: 1%;
 }
 
+header a {
+  color: white;
+  padding-right: 3%;
+  padding-bottom: 1.5%;
+}
 body{
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Dancing Script', cursive;
-  /*font-size: 2vw;*/
   background-color: #02010a;
-}
-
-#Menu a{
-  color: white;
-  text-align: right;
-}
-
-h1{
-  /*font-size: 4vw;*/
 }
 
 /*Contenedor General*/
 #contenido {
-  display: flex;/*ok*/
-  flex-flow: column;/*ok*/
+  display: flex;
+  flex-flow: column;
 }
 
 /*Contenedor de Imagen Principal*/
@@ -58,9 +41,8 @@ div{
   padding: 2%;
 }
 
-
 /* Estandirizando Formato de Imagenes*/
-.contenedor img {
+img[src$=".jpg"]{ /*--Busca src que terminen en .jpg--*/
   width: 100%;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -72,24 +54,25 @@ div{
   background-color: #d5c75f;
   display: flex;
   flex-flow: row;
-
+  text-align: center;
+  font-size: 2vw;
 }
 
 /*Accion el cursor sobre Imagen 2*/
 .img2 :hover img{
-  box-shadow: 2px 2px 5px #82c3a6; /*ok*/
+  box-shadow: 2px 2px 5px #82c3a6;
   -webkit-box-shadow: 2px 2px 5px #82c3a6;
   -moz-box-shadow: 2px 2px 5px #82c3a6;
 
-  border: 2px; /*ok*/
-  -ms-transform: rotate(10deg); /* IE 9 - ok */
-	-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera - ok */
-	transform: rotate(10deg); /*ok*/
+  border: 2px;
+  -ms-transform: rotate(10deg); /* IE 9 */
+	-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera  */
+	transform: rotate(10deg);
   }
 
 /*Accion el cursor sobre Imagen 3*/
 .img3 :hover img{
-  box-shadow: 2px 2px 5px #82c3a6; /*ok*/
+  box-shadow: 2px 2px 5px #82c3a6;
   -webkit-box-shadow: 2px 2px 5px #82c3a6;
   -moz-box-shadow: 2px 2px 5px #82c3a6;
   border: 2px;
@@ -100,6 +83,11 @@ footer{
   background-color: #c6d5c5;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
 }
 
 /*Contenedor de modulos de Pie de Pagina*/
@@ -129,27 +117,14 @@ footer{
   flex-direction: row;
 }
 
-.Fila1 img {
-  width: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 2px 2px 5px black;
-}
-
-.Fila2 img {
-  width: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 2px 2px 5px black;
-}
-
 /*Efecto en imagenes*/
 .img4{
   -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
-.img5{
+/*Busca contenido*/
+div [class = "img5"] , div [class = "img7"] , div [class = "img9"]{
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
@@ -159,20 +134,12 @@ footer{
   filter: sepia(90%);
 }
 
-.img7{
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-.img9{
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-/*--------------Pagina Retratos HTML---------------*/
-
 /*Acciones para pantallas de Celular*/
 @media (max-width:900px){
+  header{
+    text-align: center;
+    flex-direction: column;
+  }
   #secundarias .contenedor{
     flex-direction: column;
   }
@@ -189,4 +156,20 @@ footer{
     flex-direction: column;
   }
 
+}
+
+/* Animacion Pantalla */
+@keyframes header-animacion {
+	0% {
+    position: relative;
+	  margin-top: 150%;
+	}
+	60% {
+    position: relative;
+	  margin-top: -5%;
+	}
+	100% {
+    position: relative;
+		margin-top: 0%;
+	}
 }
